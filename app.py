@@ -84,6 +84,9 @@ import pickle
 import streamlit as st
 import requests
 import time
+import os
+# Set the environment variable for Netlify
+os.environ['NETLIFY'] = 'true'
 
 def fetch_poster(movie_id):
     api_key = 'c9bd7d6f35fb8240a8bf7ffa6cc24c1b'
