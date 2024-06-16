@@ -1,0 +1,305 @@
+C:\Users\aravind etagi\Desktop\movie-recommender-system-tmdb-dataset-main>heroku login
+ »   Warning: heroku update available from 7.53.0 to 7.60.2.
+heroku: Press any key to open up the browser to login or q to exit:
+Opening browser to https://cli-auth.heroku.com/auth/cli/browser/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+    Error: spawn cmd ENOENT
+    Code: ENOENT
+ »   Warning: Cannot open browser.
+Logging in... done
+Logged in as xxxxxxxxxxxxxxxxxxx@gmail.com
+
+C:\Users\aravind etagi\Desktop\movie-recommender-system-tmdb-dataset-main>git init
+Initialized empty Git repository in C:/Users/aravind etagi/Desktop/movie-recommender-system-tmdb-dataset-main/.git/
+
+C:\Users\aravind etagi\Desktop\movie-recommender-system-tmdb-dataset-main>heroku git:remote -a content-bsd-movie-recomender
+ »   Warning: heroku update available from 7.53.0 to 7.60.2.
+ »   Error: Couldn't find that app.
+ »
+ »   Error ID: not_found
+
+C:\Users\aravind etagi\Desktop\movie-recommender-system-tmdb-dataset-main>heroku git:remote -a content-bsd-movie-recomender
+ »   Warning: heroku update available from 7.53.0 to 7.60.2.
+set git remote heroku to https://git.heroku.com/content-bsd-movie-recomender.git
+
+C:\Users\aravind etagi\Desktop\movie-recommender-system-tmdb-dataset-main>git add .
+warning: LF will be replaced by CRLF in .idea/inspectionProfiles/profiles_settings.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Procfile.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in movie_recomendation.ipynb.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in tmdb_5000_credits.csv.
+The file will have its original line endings in your working directory
+
+C:\Users\aravind etagi\Desktop\movie-recommender-system-tmdb-dataset-main>git commit -am "first deployment"
+[master (root-commit) 48d7b0a] first deployment
+ 16 files changed, 12046 insertions(+)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/inspectionProfiles/profiles_settings.xml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/movie-recommender-system-tmdb-dataset-main.iml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 Procfile
+ create mode 100644 README.md
+ create mode 100644 app.py
+ create mode 100644 movie_list.pkl
+ create mode 100644 movie_recomendation.ipynb
+ create mode 100644 requirements.txt
+ create mode 100644 setup.sh
+ create mode 100644 similarity.pkl
+ create mode 100644 tmdb_5000_credits.csv
+ create mode 100644 tmdb_5000_movies.csv
+
+C:\Users\aravind etagi\Desktop\movie-recommender-system-tmdb-dataset-main>git push heroku master
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (20/20), 9.46 MiB | 296.00 KiB/s, done.
+Total 20 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Determining which buildpack to use for this app
+remote: -----> Python app detected
+remote: -----> No Python version was specified. Using the buildpack default: python-3.10.4
+remote:        To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> Installing python-3.10.4
+remote: -----> Installing pip 22.0.4, setuptools 60.10.0 and wheel 0.37.1
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote:        Collecting streamlit
+remote:          Downloading streamlit-1.9.2-py2.py3-none-any.whl (10.1 MB)
+remote:        Collecting requests
+remote:          Downloading requests-2.27.1-py2.py3-none-any.whl (63 kB)
+remote:        Collecting pyarrow
+remote:          Downloading pyarrow-8.0.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.4 MB)
+remote:        Collecting toml
+remote:          Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+remote:        Collecting gitpython!=3.1.19
+remote:          Downloading GitPython-3.1.27-py3-none-any.whl (181 kB)
+remote:        Collecting click<8.1,>=7.0
+remote:          Downloading click-8.0.4-py3-none-any.whl (97 kB)
+remote:        Collecting validators
+remote:          Downloading validators-0.19.0.tar.gz (30 kB)
+remote:          Preparing metadata (setup.py): started
+remote:          Preparing metadata (setup.py): finished with status 'done'
+remote:        Collecting tornado>=5.0
+remote:          Downloading tornado-6.1.tar.gz (497 kB)
+remote:          Preparing metadata (setup.py): started
+remote:          Preparing metadata (setup.py): finished with status 'done'
+remote:        Collecting python-dateutil
+remote:          Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+remote:        Collecting pympler>=0.9
+remote:          Downloading Pympler-1.0.1-py3-none-any.whl (164 kB)
+remote:        Collecting importlib-metadata>=1.4
+remote:          Downloading importlib_metadata-4.11.4-py3-none-any.whl (18 kB)
+remote:        Collecting altair>=3.2.0
+remote:          Downloading altair-4.2.0-py3-none-any.whl (812 kB)
+remote:        Collecting semver
+remote:          Downloading semver-2.13.0-py2.py3-none-any.whl (12 kB)
+remote:        Collecting pillow>=6.2.0
+remote:          Downloading Pillow-9.1.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+remote:        Collecting attrs
+remote:          Downloading attrs-21.4.0-py2.py3-none-any.whl (60 kB)
+remote:        Collecting cachetools>=4.0
+remote:          Downloading cachetools-5.2.0-py3-none-any.whl (9.3 kB)
+remote:        Collecting packaging
+remote:          Downloading packaging-21.3-py3-none-any.whl (40 kB)
+remote:        Collecting tzlocal
+remote:          Downloading tzlocal-4.2-py3-none-any.whl (19 kB)
+remote:        Collecting typing-extensions
+remote:          Downloading typing_extensions-4.2.0-py3-none-any.whl (24 kB)
+remote:        Collecting blinker
+remote:          Downloading blinker-1.4.tar.gz (111 kB)
+remote:          Preparing metadata (setup.py): started
+remote:          Preparing metadata (setup.py): finished with status 'done'
+remote:        Collecting watchdog
+remote:          Downloading watchdog-2.1.8-py3-none-manylinux2014_x86_64.whl (77 kB)
+remote:        Collecting pandas>=0.21.0
+remote:          Downloading pandas-1.4.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.7 MB)
+remote:        Collecting numpy
+remote:          Downloading numpy-1.22.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+remote:        Collecting pydeck>=0.1.dev5
+remote:          Downloading pydeck-0.7.1-py2.py3-none-any.whl (4.3 MB)
+remote:        Collecting protobuf<4,>=3.12
+remote:          Downloading protobuf-3.20.1-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.1 MB)
+remote:        Collecting charset-normalizer~=2.0.0
+remote:          Downloading charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
+remote:        Collecting certifi>=2017.4.17
+remote:          Downloading certifi-2022.5.18.1-py3-none-any.whl (155 kB)
+remote:        Collecting idna<4,>=2.5
+remote:          Downloading idna-3.3-py3-none-any.whl (61 kB)
+remote:        Collecting urllib3<1.27,>=1.21.1
+remote:          Downloading urllib3-1.26.9-py2.py3-none-any.whl (138 kB)
+remote:        Collecting jinja2
+remote:          Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+remote:        Collecting jsonschema>=3.0
+remote:          Downloading jsonschema-4.6.0-py3-none-any.whl (80 kB)
+remote:        Collecting toolz
+remote:          Downloading toolz-0.11.2-py3-none-any.whl (55 kB)
+remote:        Collecting entrypoints
+remote:          Downloading entrypoints-0.4-py3-none-any.whl (5.3 kB)
+remote:        Collecting gitdb<5,>=4.0.1
+remote:          Downloading gitdb-4.0.9-py3-none-any.whl (63 kB)
+remote:        Collecting zipp>=0.5
+remote:          Downloading zipp-3.8.0-py3-none-any.whl (5.4 kB)
+remote:        Collecting pytz>=2020.1
+remote:          Downloading pytz-2022.1-py2.py3-none-any.whl (503 kB)
+remote:        Collecting traitlets>=4.3.2
+remote:          Downloading traitlets-5.2.2.post1-py3-none-any.whl (106 kB)
+remote:        Collecting ipykernel>=5.1.2
+remote:          Downloading ipykernel-6.13.0-py3-none-any.whl (131 kB)
+remote:        Collecting ipywidgets>=7.0.0
+remote:          Downloading ipywidgets-7.7.0-py2.py3-none-any.whl (123 kB)
+remote:        Collecting six>=1.5
+remote:          Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+remote:        Collecting pyparsing!=3.0.5,>=2.0.2
+remote:          Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+remote:        Collecting pytz-deprecation-shim
+remote:          Downloading pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl (15 kB)
+remote:        Collecting decorator>=3.4.0
+remote:          Downloading decorator-5.1.1-py3-none-any.whl (9.1 kB)
+remote:        Collecting smmap<6,>=3.0.1
+remote:          Downloading smmap-5.0.0-py3-none-any.whl (24 kB)
+remote:        Collecting jupyter-client>=6.1.12
+remote:          Downloading jupyter_client-7.3.1-py3-none-any.whl (130 kB)
+remote:        Collecting matplotlib-inline>=0.1
+remote:          Downloading matplotlib_inline-0.1.3-py3-none-any.whl (8.2 kB)
+remote:        Collecting psutil
+remote:          Downloading psutil-5.9.1-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (282 kB)
+remote:        Collecting ipython>=7.23.1
+remote:          Downloading ipython-8.4.0-py3-none-any.whl (750 kB)
+remote:        Collecting debugpy>=1.0
+remote:          Downloading debugpy-1.6.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.8 MB)
+remote:        Collecting nest-asyncio
+remote:          Downloading nest_asyncio-1.5.5-py3-none-any.whl (5.2 kB)
+remote:        Collecting nbformat>=4.2.0
+remote:          Downloading nbformat-5.4.0-py3-none-any.whl (73 kB)
+remote:        Collecting ipython-genutils~=0.2.0
+remote:          Downloading ipython_genutils-0.2.0-py2.py3-none-any.whl (26 kB)
+remote:        Collecting jupyterlab-widgets>=1.0.0
+remote:          Downloading jupyterlab_widgets-1.1.0-py3-none-any.whl (245 kB)
+remote:        Collecting widgetsnbextension~=3.6.0
+remote:          Downloading widgetsnbextension-3.6.0-py2.py3-none-any.whl (1.6 MB)
+remote:        Collecting MarkupSafe>=2.0
+remote:          Downloading MarkupSafe-2.1.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+remote:        Collecting pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0
+remote:          Downloading pyrsistent-0.18.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (115 kB)
+remote:        Collecting tzdata
+remote:          Downloading tzdata-2022.1-py2.py3-none-any.whl (339 kB)
+remote:        Collecting pygments>=2.4.0
+remote:          Downloading Pygments-2.12.0-py3-none-any.whl (1.1 MB)
+remote:        Collecting pexpect>4.3
+remote:          Downloading pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+remote:        Collecting stack-data
+remote:          Downloading stack_data-0.2.0-py3-none-any.whl (21 kB)
+remote:        Collecting backcall
+remote:          Downloading backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+remote:        Collecting prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0
+remote:          Downloading prompt_toolkit-3.0.29-py3-none-any.whl (381 kB)
+remote:        Collecting jedi>=0.16
+remote:          Downloading jedi-0.18.1-py2.py3-none-any.whl (1.6 MB)
+remote:        Collecting pickleshare
+remote:          Downloading pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+remote:        Collecting jupyter-core>=4.9.2
+remote:          Downloading jupyter_core-4.10.0-py3-none-any.whl (87 kB)
+remote:        Collecting pyzmq>=22.3
+remote:          Downloading pyzmq-23.0.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+remote:        Collecting fastjsonschema
+remote:          Downloading fastjsonschema-2.15.3-py3-none-any.whl (22 kB)
+remote:        Collecting notebook>=4.4.1
+remote:          Downloading notebook-6.4.11-py3-none-any.whl (9.9 MB)
+remote:        Collecting parso<0.9.0,>=0.8.0
+remote:          Downloading parso-0.8.3-py2.py3-none-any.whl (100 kB)
+remote:        Collecting nbconvert>=5
+remote:          Downloading nbconvert-6.5.0-py3-none-any.whl (561 kB)
+remote:        Collecting prometheus-client
+remote:          Downloading prometheus_client-0.14.1-py3-none-any.whl (59 kB)
+remote:        Collecting terminado>=0.8.3
+remote:          Downloading terminado-0.15.0-py3-none-any.whl (16 kB)
+remote:        Collecting argon2-cffi
+remote:          Downloading argon2_cffi-21.3.0-py3-none-any.whl (14 kB)
+remote:        Collecting Send2Trash>=1.8.0
+remote:          Downloading Send2Trash-1.8.0-py3-none-any.whl (18 kB)
+remote:        Collecting ptyprocess>=0.5
+remote:          Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+remote:        Collecting wcwidth
+remote:          Downloading wcwidth-0.2.5-py2.py3-none-any.whl (30 kB)
+remote:        Collecting asttokens
+remote:          Downloading asttokens-2.0.5-py2.py3-none-any.whl (20 kB)
+remote:        Collecting executing
+remote:          Downloading executing-0.8.3-py2.py3-none-any.whl (16 kB)
+remote:        Collecting pure-eval
+remote:          Downloading pure_eval-0.2.2-py3-none-any.whl (11 kB)
+remote:        Collecting nbclient>=0.5.0
+remote:          Downloading nbclient-0.6.4-py3-none-any.whl (71 kB)
+remote:        Collecting pandocfilters>=1.4.1
+remote:          Downloading pandocfilters-1.5.0-py2.py3-none-any.whl (8.7 kB)
+remote:        Collecting mistune<2,>=0.8.1
+remote:          Downloading mistune-0.8.4-py2.py3-none-any.whl (16 kB)
+remote:        Collecting defusedxml
+remote:          Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+remote:        Collecting beautifulsoup4
+remote:          Downloading beautifulsoup4-4.11.1-py3-none-any.whl (128 kB)
+remote:        Collecting bleach
+remote:          Downloading bleach-5.0.0-py3-none-any.whl (160 kB)
+remote:        Collecting jupyterlab-pygments
+remote:          Downloading jupyterlab_pygments-0.2.2-py2.py3-none-any.whl (21 kB)
+remote:        Collecting tinycss2
+remote:          Downloading tinycss2-1.1.1-py3-none-any.whl (21 kB)
+remote:        Collecting argon2-cffi-bindings
+remote:          Downloading argon2_cffi_bindings-21.2.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (86 kB)
+remote:        Collecting cffi>=1.0.1
+remote:          Downloading cffi-1.15.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (446 kB)
+remote:        Collecting soupsieve>1.2
+remote:          Downloading soupsieve-2.3.2.post1-py3-none-any.whl (37 kB)
+remote:        Collecting webencodings
+remote:          Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+remote:        Collecting pycparser
+remote:          Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+remote:        Building wheels for collected packages: tornado, blinker, validators
+remote:          Building wheel for tornado (setup.py): started
+remote:          Building wheel for tornado (setup.py): finished with status 'done'
+remote:          Created wheel for tornado: filename=tornado-6.1-cp310-cp310-linux_x86_64.whl size=427358 sha256=ef30a1b2c863257d9f717a315b1f49cf55d6e3059e6253d6d3a546d49b02e8f1
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-4w0mp5z8/wheels/80/32/8d/21cf0fa6ee4e083f6530e5b83dfdfa9489a3890d320803f4c7
+remote:          Building wheel for blinker (setup.py): started
+remote:          Building wheel for blinker (setup.py): finished with status 'done'
+remote:          Created wheel for blinker: filename=blinker-1.4-py3-none-any.whl size=13478 sha256=f9ee8b55b9aced24b5822aa8cc41deae0ecb41e13ba357b2d059d9454bf987d3
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-4w0mp5z8/wheels/46/d1/36/f5bd574e4181b8e1ca3e12dd8d243aa9218725603566fd3c1d
+remote:          Building wheel for validators (setup.py): started
+remote:          Building wheel for validators (setup.py): finished with status 'done'
+remote:          Created wheel for validators: filename=validators-0.19.0-py3-none-any.whl size=19553 sha256=071db59a31dda6cfa5df2b8e205f090ef770b4a78b8e400e5ab2bebc5447e399
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-4w0mp5z8/wheels/6d/32/0f/3022ff423e5a8312695418cd048860d4dd0345529dcdbe3cd1
+remote:        Successfully built tornado blinker validators
+remote:        Installing collected packages: webencodings, wcwidth, Send2Trash, pytz, pure-eval, ptyprocess, pickleshare, mistune, ipython-genutils, fastjsonschema, executing, blinker, backcall, zipp, watchdog, u
+rllib3, tzdata, typing-extensions, traitlets, tornado, toolz, toml, tinycss2, soupsieve, smmap, six, semver, pyzmq, pyrsistent, pyparsing, pympler, pygments, pycparser, psutil, protobuf, prompt-toolkit, prometheus
+-client, pillow, pexpect, parso, pandocfilters, numpy, nest-asyncio, MarkupSafe, jupyterlab-widgets, jupyterlab-pygments, idna, entrypoints, defusedxml, decorator, debugpy, click, charset-normalizer, certifi, cach
+etools, attrs, validators, terminado, requests, pytz-deprecation-shim, python-dateutil, pyarrow, packaging, matplotlib-inline, jupyter-core, jsonschema, jinja2, jedi, importlib-metadata, gitdb, cffi, bleach, beaut
+ifulsoup4, asttokens, tzlocal, stack-data, pandas, nbformat, jupyter-client, gitpython, argon2-cffi-bindings, nbclient, ipython, argon2-cffi, altair, nbconvert, ipykernel, notebook, widgetsnbextension, ipywidgets,
+ pydeck, streamlit
+remote:        Successfully installed MarkupSafe-2.1.1 Send2Trash-1.8.0 altair-4.2.0 argon2-cffi-21.3.0 argon2-cffi-bindings-21.2.0 asttokens-2.0.5 attrs-21.4.0 backcall-0.2.0 beautifulsoup4-4.11.1 bleach-5.0.0 bl
+inker-1.4 cachetools-5.2.0 certifi-2022.5.18.1 cffi-1.15.0 charset-normalizer-2.0.12 click-8.0.4 debugpy-1.6.0 decorator-5.1.1 defusedxml-0.7.1 entrypoints-0.4 executing-0.8.3 fastjsonschema-2.15.3 gitdb-4.0.9 git
+python-3.1.27 idna-3.3 importlib-metadata-4.11.4 ipykernel-6.13.0 ipython-8.4.0 ipython-genutils-0.2.0 ipywidgets-7.7.0 jedi-0.18.1 jinja2-3.1.2 jsonschema-4.6.0 jupyter-client-7.3.1 jupyter-core-4.10.0 jupyterlab
+-pygments-0.2.2 jupyterlab-widgets-1.1.0 matplotlib-inline-0.1.3 mistune-0.8.4 nbclient-0.6.4 nbconvert-6.5.0 nbformat-5.4.0 nest-asyncio-1.5.5 notebook-6.4.11 numpy-1.22.4 packaging-21.3 pandas-1.4.2 pandocfilter
+s-1.5.0 parso-0.8.3 pexpect-4.8.0 pickleshare-0.7.5 pillow-9.1.1 prometheus-client-0.14.1 prompt-toolkit-3.0.29 protobuf-3.20.1 psutil-5.9.1 ptyprocess-0.7.0 pure-eval-0.2.2 pyarrow-8.0.0 pycparser-2.21 pydeck-0.7
+.1 pygments-2.12.0 pympler-1.0.1 pyparsing-3.0.9 pyrsistent-0.18.1 python-dateutil-2.8.2 pytz-2022.1 pytz-deprecation-shim-0.1.0.post0 pyzmq-23.0.0 requests-2.27.1 semver-2.13.0 six-1.16.0 smmap-5.0.0 soupsieve-2.
+3.2.post1 stack-data-0.2.0 streamlit-1.9.2 terminado-0.15.0 tinycss2-1.1.1 toml-0.10.2 toolz-0.11.2 tornado-6.1 traitlets-5.2.2.post1 typing-extensions-4.2.0 tzdata-2022.1 tzlocal-4.2 urllib3-1.26.9 validators-0.1
+9.0 watchdog-2.1.8 wcwidth-0.2.5 webencodings-0.5.1 widgetsnbextension-3.6.0 zipp-3.8.0
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 181.6M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://content-bsd-movie-recomender.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/content-bsd-movie-recomender.git
+ * [new branch]      master -> master
